@@ -1,3 +1,7 @@
+html {
+  font-size: 62.5%; /* font-size 1em = 10px on default browser settings */
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -5,9 +9,90 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #030616;
+  color: white;
+  font-size: 1.8rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: default;
+}
+
+.App {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 1rem;
+}
+
+.content {
+  min-height: 3.4rem;
+  line-height: 1;
+  width: 15rem;
+  padding-right: 3rem;
+}
+
+.warning {
+  line-height: 3.4rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.stop-icon {
+  cursor: pointer;
+  position: absolute;
+  right: 4rem;
+  top: 1.7rem;
+}
+
+.draggable {
+  line-height: 1;
+  cursor: move;
+  -webkit-app-region: drag;
+}
+
+.draggable:active {
+  cursor: grabbing;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+button {
+  cursor: pointer;
+  background: #2529D8;
+  color: white;
+  border-radius: 4px;
+  border: 2px solid transparent;
+  padding: 0.8rem 2rem;
+  font-weight: 600;
+}
+
+button:hover {
+  background: #2F33EB;
+}
+
+button:active {
+  background: #1D20CB;
+}
+
+button:focus {
+  outline: 0;
+  background: #1D20CB;
+  border-color: #6C70FF;
+}
+
+
+::-moz-selection { background: #46BFBF; color: white; }
+::selection { background: #46BFBF; color: white; }
+
+.titlebar {
+  -webkit-user-select: none;
+  -webkit-app-region: drag;
+}
+
+.titlebar-button {
+  -webkit-app-region: no-drag;
 }

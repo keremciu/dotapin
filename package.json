@@ -1,5 +1,6 @@
 {
   "name": "dotapin",
+  "description": "Mini-desktop app to improve your Dota experience",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -7,11 +8,20 @@
     "react-dom": "^16.8.6",
     "wonky-scripts": "0.0.5"
   },
+  "devDependencies": {
+    "electron": "^5.0.4",
+    "electron-builder": "^20.44.2",
+    "foreman": "^3.0.1",
+    "typescript": "^3.5.2"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "dev": "nf start",
+    "electron": "electron .",
+    "ebuild": "yarn build && node_modules/.bin/build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -26,6 +36,17 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "homepage": "./",
+  "main": "electron/main.js",
+  "build": {
+    "productName": "dotapin",
+    "appId": "com.ciuapps.dotapin",
+    "electronVersion": "5.0.4",
+    "files": [
+      "build/**/*",
+      "electron/*"
     ]
   }
 }
